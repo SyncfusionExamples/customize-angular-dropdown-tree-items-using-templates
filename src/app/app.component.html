@@ -1,0 +1,26 @@
+<div class="control-section">
+  <ejs-dropdowntree [fields]="datasourceFields" cssClass="ddt-template" [showCheckBox]="true"
+  [mode]="mode" [customTemplate]="selectedItemsTemplate" [treeSettings]="componentSettings"
+  placeholder="Select an employee" popupHeight="350px" popupWidth="300px">
+  <ng-template #noRecordsTemplate >
+    <span>No Data Available</span>
+  </ng-template>
+  <ng-template #itemTemplate let-data>
+    <div>
+        <img class="eimage" src="./assets/dropdowntree/employee/{{data.eimg}}.png" alt="{{data.eimg}}" />
+        <div>
+            <div class="ename">{{data.name}}</div>
+            <div class="ejob">{{data.job}}</div> 
+        </div>
+    </div>
+  </ng-template>
+  <ng-template #headerTemplate>
+    <div class="header">Employee List</div>
+  </ng-template>
+  <ng-template #footerTemplate>
+    <div class="footer">
+      <span>Total list items: 8</span>
+    </div>
+  </ng-template>
+  </ejs-dropdowntree>
+</div>
